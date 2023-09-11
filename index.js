@@ -43,7 +43,7 @@ app.get("/api", (req, res) => {
   ]
 
   const currentDay = Day[currentDate.getUTCDay()]
-  const utcTime = currentDate.toISOString()
+  const utcTime = currentDate.toISOString().split(".")[0] + "Z"
   const githubFileUrl = "https://github.com/jorshimayor/backend_zuri1_/blob/main/index.js"
   const githubRepoUrl = "https://github.com/jorshimayor/backend_zuri1_"
 
